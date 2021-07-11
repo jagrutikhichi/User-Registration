@@ -16,11 +16,27 @@ public class UserRegistrationImpl implements UserRegistraion{
 		Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{3,20}$");
 		Matcher matcher = pattern.matcher(name);
 		if (matcher.matches()) {
-			System.out.println("Given name id is valid");
 		} else {
 			System.out.println("Given name id is not valid");
-		}
-		
+		}	
 	}
+
+	@Override
+	public void lastNameValidate() {
+		Scanner sc = new Scanner(System.in);
+
+		String regex = "^[A-Z]{1}[a-z]{3,20}$";
+
+		System.out.println("Enter your last name");
+		String name = sc.next();
+
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(name);
+		if (matcher.matches()) {
+		} else {
+			System.out.println("Given last name id is not valid");
+		}
+	}
+	
 
 }
