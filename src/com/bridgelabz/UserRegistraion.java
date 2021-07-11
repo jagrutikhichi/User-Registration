@@ -1,5 +1,6 @@
 package com.bridgelabz;
 
-public class UserRegistraion {
+public interface UserRegistraion {
 
+	void firstNameValidate();
 }
