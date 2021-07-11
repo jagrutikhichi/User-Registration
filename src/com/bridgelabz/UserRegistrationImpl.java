@@ -50,6 +50,21 @@ public class UserRegistrationImpl implements UserRegistraion{
             System.out.println("Given email id is not valid");
         }
 	}
+
+	@Override
+	public void mobileValidate() {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter your Mobile number");
+		String email = sc.next();
+
+		Pattern pattern = Pattern.compile("^(91){1}[0-9]{9}$");
+		Matcher matcher = pattern.matcher(email);
+		if (matcher.matches()) {
+		} else {
+			System.out.println("Given mobile number. is not valid");
+		}
+	}
 	
 
 }

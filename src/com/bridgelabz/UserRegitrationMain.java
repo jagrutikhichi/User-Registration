@@ -7,7 +7,7 @@ public class UserRegitrationMain {
 		myObj.firstNameValidate();
 		myObj.lastNameValidate();
 		myObj.emailValidate();
-
+		myObj.mobileValidate();
 	}
 
 }
