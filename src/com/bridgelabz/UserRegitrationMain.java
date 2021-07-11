@@ -6,6 +6,7 @@ public class UserRegitrationMain {
 		UserRegistrationImpl myObj = new UserRegistrationImpl();
 		myObj.firstNameValidate();
 		myObj.lastNameValidate();
+		myObj.emailValidate();
 
 	}
 
