@@ -6,4 +6,5 @@ public interface UserRegistraion {
 	void lastNameValidate();
 	void emailValidate();
 	void mobileValidate();
+	void passwordValidate();
 }

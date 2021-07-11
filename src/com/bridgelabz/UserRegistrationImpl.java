@@ -58,11 +58,26 @@ public class UserRegistrationImpl implements UserRegistraion{
 		System.out.println("Enter your Mobile number");
 		String email = sc.next();
 
-		Pattern pattern = Pattern.compile("^(91){1}[0-9]{9}$");
+		Pattern pattern = Pattern.compile("^(91){1}[0-9]{10}$");
 		Matcher matcher = pattern.matcher(email);
 		if (matcher.matches()) {
 		} else {
 			System.out.println("Given mobile number. is not valid");
+		}
+	}
+
+	@Override
+	public void passwordValidate() {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter your Password");
+		String password = sc.next();
+
+		Pattern pattern = Pattern.compile("^(?=.{8,20})(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$");
+		Matcher matcher = pattern.matcher(password);
+		if (matcher.matches()) {
+		} else {
+			System.out.println("Given password is not valid");
 		}
 	}
 	
